@@ -1,19 +1,18 @@
 using System;
+using System.Linq;
 
 public class Resume
 {
-    private string _name;
-    private List<Job> _jobs = new List<Job>();
+    public string _name;
 
-    public string Name { get { return _name; } set { _name = value; } }
-    public List<Job> Jobs { get { return _jobs; } set { _jobs = value; } }
+    // Make sure to initialize your list to a new List before you use it.
+    public List<Job> _jobs = new List<Job>();
 
     public void Display()
     {
-        Console.WriteLine("Resume for {0}:", _name);
-        foreach (Job job in _jobs)
-        {
-            job.DisplayJobDetails();
-        }
+        Console.WriteLine($"Name: {_name}");
+        Console.WriteLine("Jobs:");
+        //using linq method to iterate over the list
+        _jobs.ForEach(job => job.Display());
     }
 }
