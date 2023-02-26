@@ -1,18 +1,14 @@
-using System;
-
 public class WritingAssignment : Assignment
 {
-    private string topicDetails;
+    private string _writingTopic;
 
-    public WritingAssignment(string studentName, string topic, string topicDetails)
-        : base(studentName, topic)
+    public WritingAssignment(string studentName, string topic, string writingTopic) : base(studentName, topic)
     {
-        this.topicDetails = topicDetails;
+        _writingTopic = writingTopic;
     }
 
     public string GetWritingInformation()
     {
-        string studentName = base.GetStudentName();
-        return $"{topicDetails} by {studentName}";
+        return $"{_writingTopic} by {GetStudentName()}";
     }
 }
