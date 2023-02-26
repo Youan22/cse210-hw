@@ -9,11 +9,18 @@ class Program
 
         Console.WriteLine(summary);
 
-        MathAssignment mathAssignment = new MathAssignment("Section", "Fractions", "7.3", "8-19");
-        //string summary = mathAssignment.GetSummary();
+        MathAssignment mathAssignment = new MathAssignment("Roberto Rodriguez", "Fractions", "7", "8-19");
+
         string homeworkList = mathAssignment.GetHomeworkList();
-        //Console.WriteLine(summary);
+        Console.WriteLine(summary);
         Console.WriteLine(homeworkList);
+
+        
+
+        WritingAssignment writingAssignment = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
+        string writingInfo = writingAssignment.GetWritingInformation();
+        Console.WriteLine(summary);
+        Console.WriteLine(writingInfo);
 
 
     }

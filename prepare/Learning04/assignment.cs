@@ -1,18 +1,21 @@
-using System;
+public class Assignment
+{
+    private string _studentName;
+    private string _topic;
 
-    public class Assignment
+    public Assignment(string studentName, string topic)
     {
-        private string studentName;
-        private string topic;
-
-        public Assignment(string studentName, string topic)
-        {
-            this.studentName = studentName;
-            this.topic = topic;
-        
-        }
-        public string GetSummary()
-        {
-            return $"{studentName} - {topic}";
-        }
+        _studentName = studentName;
+        _topic = topic;
     }
+
+    public string GetSummary()
+    {
+        return $"{_studentName} - {_topic}";
+    }
+
+    public string GetStudentName()
+    {
+        return _studentName;
+    }
+}
