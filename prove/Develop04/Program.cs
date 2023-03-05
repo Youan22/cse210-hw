@@ -36,6 +36,7 @@ using System.Collections.Generic;
                     break;
                 case "4":
                     Console.WriteLine("Goodbye!");
+                    System.Console.WriteLine("We hope you will come back soon!!");
                     return;
                 default:
                     Console.WriteLine("Invalid choice, please try again.");
