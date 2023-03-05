@@ -1,15 +1,10 @@
-class Entry
+using System;
+public class Entry
 {
     public string Prompt { get; }
     public string Response { get; }
     public string Date { get; }
 
-    public Entry(
-
-using System;
-
-class Entry
-{
     public string Title { get; set; }
     public string Content { get; set; }
     public DateTime CreatedAt { get; set; }

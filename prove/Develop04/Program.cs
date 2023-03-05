@@ -5,19 +5,45 @@ using System.Collections.Generic;
     {
         static void Main(string[] args)
         {
-            // create menu options
-            Menu breathing = new Menu("Breathing exercise", new BreathingActivity());
-            Menu reflection = new Menu("Reflection exercise", new ReflectionActivity());
-            Menu listing = new Menu("Listing exercise", new ListingActivity());
+            Menu menu = new Menu();
+            while (true)
 
-            // create menu
-            Menu menu = new Menu(new Menu[] { breathing, reflection, listing });
+        {
+            menu.Display();
 
-            // run menu
-            Menu.Run();
+            // Run();
+            Console.Write("Enter your choice (1-4): ");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    BreathingActivity breathingActivity = new BreathingActivity();
+                    breathingActivity.Start();
+                    Console.Clear();
+                
+                    break;
+                case "2":
+                    ReflectionActivity reflectionActivity = new ReflectionActivity();
+                    reflectionActivity.Start();
+                    Console.Clear();
+                    break;
+                case "3":
+                    ListingActivity listingActivity = new ListingActivity();
+                    listingActivity.Start();
+                    Console.Clear();
+                    break;
+                case "4":
+                    Console.WriteLine("Goodbye!");
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice, please try again.");
+                    break;
+            }
     //     }
-    // }
-
+        }
+        }
+    }
 
 
 

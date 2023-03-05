@@ -11,19 +11,38 @@ public class ListingActivity : Activity
         "What are some things that you want to accomplish?",
         "What are some things that you are proud of?"
     };
-
-    public void RunActivity()
+    public ListingActivity() : base("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", "Listing")
     {
-        Console.WriteLine("Welcome to the Listing Activity!");
-        Console.WriteLine("Please respond to the following prompts:");
 
+    }
+    public override void StartMessage()
+    {
+        base.StartMessage();
+    }
+     public override int GetTime(int second)
+    {
+        return base.GetTime(second);
+    }
+    public void Start()
+    {
+        StartMessage();
+        int getTime = GetTime(25);
+        Console.Clear();
+
+        DateTime startTime = new DateTime();
+        DateTime futureTime = startTime.AddSeconds(getTime);
+        Console.WriteLine("Please respond to the following prompts:");
+        while(startTime < futureTime)
+        { 
+            startTime = DateTime.Now;
         foreach (string prompt in prompts)
         {
-            Console.Write(prompt + " ");
+            Console.WriteLine(prompt + " ");
             string response = Console.ReadLine();
             Console.WriteLine("You entered: " + response);
         }
-
-        Console.WriteLine("Thank you for participating in the Listing Activity!");
+        }
+        EndingMessage();
+        // Console.WriteLine("Thank you for participating in the Listing Activity!");
     }
 }
