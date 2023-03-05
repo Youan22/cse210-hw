@@ -5,6 +5,7 @@ public class ListingActivity : Activity
 {
     private List<string> prompts = new List<string>()
     {
+        // String used to ask question the users and help them think about things to list,
         "Who are people that you appreciate?",
         "What are some things that make you happy?",
         "What are some things that you are grateful for?",
