@@ -21,7 +21,7 @@ using System.Collections.Generic;
                     BreathingActivity breathingActivity = new BreathingActivity();
                     breathingActivity.Start();
                     Console.Clear();
-                
+                    Console.Clear();
                     break;
                 case "2":
                     ReflectionActivity reflectionActivity = new ReflectionActivity();
@@ -29,9 +29,9 @@ using System.Collections.Generic;
                     Console.Clear();
                     break;
                 case "3":
+                    Console.Clear();
                     ListingActivity listingActivity = new ListingActivity();
                     listingActivity.Start();
-                    Console.Clear();
                     break;
                 case "4":
                     Console.WriteLine("Goodbye!");

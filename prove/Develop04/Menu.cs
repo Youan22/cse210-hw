@@ -7,6 +7,7 @@ public class Menu
 
 public void Display()
     {
+    System.Console.WriteLine();
     Console.WriteLine("Welcome to the Activity Menu!");
     Console.WriteLine("1. Breathing Activity");
     Console.WriteLine("2. Reflection Activity");

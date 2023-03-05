@@ -13,7 +13,6 @@ public class BreathingActivity : Activity
         return base.GetTime(second);
     }
     public void Start()
-
     {
         StartMessage();
         int getTime = GetTime(25);
