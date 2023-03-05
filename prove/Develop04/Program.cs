@@ -13,6 +13,7 @@ using System.Collections.Generic;
 
             // Run();
             Console.Write("Enter your choice (1-4): ");
+            System.Console.WriteLine();
             string choice = Console.ReadLine();
 
             switch (choice)
