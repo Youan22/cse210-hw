@@ -6,12 +6,23 @@ public class Scripture
     public string Reference { get; }
     private List<Word> words;
     private Random random;
+    private static Dictionary<string, string> scriptureLibrary = new Dictionary<string, string>
+    {
+        { "John 3:16", "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." },
+        { "Matthew 6:33", "But seek first his kingdom and his righteousness, and all these things will be given to you as well." },
+        { "Psalm 23:1", "The LORD is my shepherd, I lack nothing." },
+        { "Romans 8:28", "And we know that in all things God works for the good of those who love him, who have been called according to his purpose." },
+        {"Jeremiah 29:11", "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."}
+    };
 
     public Scripture(string reference, string text)
     {
         Reference = reference;
         words = new List<Word>();
         random = new Random();
+
+        // Get text from library based on reference
+        string scripture = scriptureLibrary[reference];
 
         // Split text into individual words
         string[] wordArray = text.Split(' ');

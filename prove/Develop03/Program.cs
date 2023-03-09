@@ -1,11 +1,12 @@
-using System;
-
 class Program
 {
     static void Main(string[] args)
     {
-        // Create a new scripture
-        Scripture scripture = new Scripture("John 3:16", "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
+        // Create a scripture library
+        ScriptureLibrary library = new ScriptureLibrary();
+
+        // Get a random scripture from the library
+        Scripture scripture = library.GetRandomScripture();
 
         // Display the scripture
         Console.WriteLine(scripture.GetRenderedText());
@@ -24,4 +25,3 @@ class Program
         }
     }
 }
-
