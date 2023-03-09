@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.IO;
 class Journal
     {
         private List<Entry> entries = new List<Entry>();

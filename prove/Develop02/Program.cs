@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace JournalProgram
-{
-    class Program
+
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -46,4 +45,3 @@ namespace JournalProgram
             }
         }
     }
-}
